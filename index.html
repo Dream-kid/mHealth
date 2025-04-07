@@ -2,103 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mhealth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeCircle - Mhealth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
+      color: #333;
     }
 
-    .header {
-      background-color: #2c3e50;
+    .hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://github.com/Dream-kid/mHealth/blob/main/picture/figure1.png?raw=true') no-repeat center center/cover;
       color: #fff;
-      padding: 30px;
+      padding: 100px 20px;
       text-align: center;
+      animation: fadeIn 1s ease-out;
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: 36px;
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
-    .header p {
-      margin: 10px 0 0;
-      font-size: 18px;
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
     }
 
     .section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #2c3e50;
     }
 
     .team-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+      gap: 40px;
     }
 
     .team-member {
       background-color: #fff;
       padding: 20px;
-      border-radius: 12px;
-      width: 220px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      border-radius: 16px;
+      width: 240px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .team-member:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
 
-    .team-member .name {
-      margin-top: 10px;
+    .team-member img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .name {
+      margin-top: 12px;
       font-weight: bold;
+      font-size: 18px;
       color: #2c3e50;
     }
 
-    .team-member .role {
-      font-size: 13px;
-      color: #555;
+    .role {
+      font-size: 14px;
+      color: #777;
       margin-top: 4px;
     }
 
     .linkedin-icon img {
-      width: 14px;
-      height: 14px;
-      margin-top: 6px;
-    }
-
-    .projects {
-      background-color: #e8f5e9;
-      padding: 40px 20px;
+      width: 18px;
+      height: 18px;
+      margin-top: 10px;
     }
 
     .workflow-images {
       display: flex;
       justify-content: center;
-      gap: 30px;
       flex-wrap: wrap;
+      gap: 30px;
       margin-top: 30px;
     }
 
     .workflow-images img {
-      max-width: 600px;
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .projects {
+      background-color: #e8f5e9;
+      padding: 60px 20px;
+    }
+
+    .projects p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #333;
     }
 
     .funding-note {
-      background-color: #fefefe;
-      padding: 30px 20px;
+      background-color: #fff;
+      padding: 40px 20px;
       text-align: center;
       font-size: 16px;
-      color: #333;
       border-top: 1px solid #ccc;
+      animation: fadeIn 1s ease-out;
     }
 
     .footer {
@@ -107,12 +138,22 @@
       text-align: center;
       padding: 20px;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
+  <!-- Hero Banner -->
+  <div class="hero">
     <h1>SafeCircle</h1>
     <p>Empowering Health with Technology</p>
   </div>
@@ -121,12 +162,8 @@
   <div class="section">
     <h2>Our Team</h2>
     <div class="team-container">
-
-      <!-- Member 1 -->
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true"
-             alt="Soarov Chakra Borty"
-             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakra Borty">
         <div class="name">Soarov Chakra Borty</div>
         <div class="role">Graduate Research Assistant</div>
         <div class="role">Department of Information Technology</div>
@@ -137,11 +174,8 @@
         </a>
       </div>
 
-      <!-- Member 2 -->
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/awan.jpeg?raw=true"
-             alt="Awan-ur Rahman"
-             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/awan.jpeg?raw=true" alt="Awan-ur Rahman">
         <div class="name">Awan-ur Rahman</div>
         <div class="role">Graduate Research Assistant</div>
         <div class="role">Department of Information Technology</div>
@@ -152,11 +186,8 @@
         </a>
       </div>
 
-      <!-- Member 3 -->
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sakib.jpeg?raw=true"
-             alt="Shakib Quddus"
-             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sakib.jpeg?raw=true" alt="Shakib Quddus">
         <div class="name">Shakib Quddus</div>
         <div class="role">Graduate Research Assistant</div>
         <div class="role">Department of Electrical and Computer Engineering</div>
@@ -166,7 +197,6 @@
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
         </a>
       </div>
-
     </div>
   </div>
 
@@ -174,14 +204,8 @@
   <div class="section">
     <h2>Advisors</h2>
     <div class="team-container">
-
-      
-
-      <!-- Advisor 2 -->
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/ns.jpeg?raw=true"
-             alt="Dr. Nazmus Sakib"
-             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/ns.jpeg?raw=true" alt="Dr. Nazmus Sakib">
         <div class="name">Nazmus Sakib</div>
         <div class="role">Assistant Professor</div>
         <div class="role">Department of Information Technology</div>
@@ -192,11 +216,8 @@
         </a>
       </div>
 
-      <!-- Advisor 1 -->
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sc1.png?raw=true"
-             alt="Dr. Sumit Chakravarty"
-             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sc1.png?raw=true" alt="Dr. Sumit Chakravarty">
         <div class="name">Sumit Chakravarty</div>
         <div class="role">Associate Professor</div>
         <div class="role">Department of Electrical and Computer Engineering</div>
@@ -206,7 +227,6 @@
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
         </a>
       </div>
-
     </div>
   </div>
 
@@ -218,7 +238,7 @@
     </p>
   </div>
 
-  <!-- Workflow Images Section -->
+  <!-- Workflow Section -->
   <div class="section">
     <h2>This is Workflow</h2>
     <div class="workflow-images">
@@ -233,14 +253,14 @@
     <p>Discover how we're transforming healthcare with innovative solutions in mobile technology, data analytics, and patient monitoring systems.</p>
   </div>
 
-  <!-- Funding Acknowledgment -->
+  <!-- Funding Section -->
   <div class="funding-note">
     This project is funded by the National Institutes of Health (NIH).
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    <p>&copy; 2025 Mhealth. All rights reserved.</p>
+    <p>&copy; 2025 SafeCircle - Mhealth. All rights reserved.</p>
   </div>
 
 </body>
