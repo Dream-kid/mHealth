@@ -2,179 +2,245 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafeCircle | Empowering Health with Technology</title>
+  <title>Mhealth</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #f4f4f4;
     }
 
     .header {
-      background-color: #1e3a5f;
+      background-color: #2c3e50;
       color: #fff;
-      padding: 40px 20px;
+      padding: 30px;
       text-align: center;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 36px;
     }
 
     .header p {
       margin: 10px 0 0;
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 18px;
     }
 
     .section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
-    }
-
-    h2 {
-      font-size: 28px;
-      color: #1e3a5f;
     }
 
     .team-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
       margin-top: 30px;
     }
 
     .team-member {
       background-color: #fff;
       padding: 20px;
-      border-radius: 16px;
-      width: 240px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
     .team-member:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
     }
 
-    .team-member img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .name {
-      margin-top: 12px;
-      font-size: 18px;
+    .team-member .name {
+      margin-top: 10px;
       font-weight: bold;
-      color: #1e3a5f;
+      color: #2c3e50;
     }
 
-    .role {
-      font-size: 14px;
+    .team-member .role {
+      font-size: 13px;
       color: #555;
       margin-top: 4px;
     }
 
     .linkedin-icon img {
-      width: 18px;
-      height: 18px;
-      margin-top: 10px;
+      width: 14px;
+      height: 14px;
+      margin-top: 6px;
     }
 
-    .projects, .funding-note {
-      background-color: #eef8f1;
+    .projects {
+      background-color: #e8f5e9;
       padding: 40px 20px;
-      font-size: 16px;
-      line-height: 1.6;
     }
 
     .workflow-images {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 30px;
+      flex-wrap: wrap;
       margin-top: 30px;
     }
 
     .workflow-images img {
       max-width: 600px;
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .funding-note {
+      background-color: #fefefe;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      border-top: 1px solid #ccc;
     }
 
     .footer {
-      background-color: #1e3a5f;
+      background-color: #2c3e50;
       color: #fff;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      .team-member {
-        width: 100%;
-        max-width: 300px;
-      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <div class="header">
     <h1>SafeCircle</h1>
     <p>Empowering Health with Technology</p>
   </div>
 
+  <!-- Team Section -->
   <div class="section">
     <h2>Our Team</h2>
     <div class="team-container">
-      <!-- Team members will appear here -->
-      <!-- Add team-member blocks -->
+
+      <!-- Member 1 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true"
+             alt="Soarov Chakra Borty"
+             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <div class="name">Soarov Chakra Borty</div>
+        <div class="role">Graduate Research Assistant</div>
+        <div class="role">Department of Information Technology</div>
+        <div class="role">Kennesaw State University</div>
+        <div class="role">sborty@students.kennesaw.edu</div>
+        <a class="linkedin-icon" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/awan.jpeg?raw=true"
+             alt="Awan-ur Rahman"
+             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <div class="name">Awan-ur Rahman</div>
+        <div class="role">Graduate Research Assistant</div>
+        <div class="role">Department of Information Technology</div>
+        <div class="role">Kennesaw State University</div>
+        <div class="role">arahma21@students.kennesaw.edu</div>
+        <a class="linkedin-icon" href="https://www.linkedin.com/in/awanurrahman/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sakib.jpeg?raw=true"
+             alt="Shakib Quddus"
+             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <div class="name">Shakib Quddus</div>
+        <div class="role">Graduate Research Assistant</div>
+        <div class="role">Department of Electrical and Computer Engineering</div>
+        <div class="role">Kennesaw State University</div>
+        <div class="role">squddus@students.kennesaw.edu</div>
+        <a class="linkedin-icon" href="https://www.linkedin.com/in/shakib-quddus/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+
     </div>
   </div>
 
+  <!-- Advisors Section -->
   <div class="section">
     <h2>Advisors</h2>
     <div class="team-container">
-      <!-- Advisor blocks will appear here -->
+
+      
+
+      <!-- Advisor 2 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/ns.jpeg?raw=true"
+             alt="Dr. Nazmus Sakib"
+             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <div class="name">Nazmus Sakib</div>
+        <div class="role">Assistant Professor</div>
+        <div class="role">Department of Information Technology</div>
+        <div class="role">Kennesaw State University</div>
+        <div class="role">nsakib1@kennesaw.edu</div>
+        <a class="linkedin-icon" href="https://www.linkedin.com/in/nazmus-sakib-032718b8/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+
+      <!-- Advisor 1 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sc1.png?raw=true"
+             alt="Dr. Sumit Chakravarty"
+             style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+        <div class="name">Sumit Chakravarty</div>
+        <div class="role">Associate Professor</div>
+        <div class="role">Department of Electrical and Computer Engineering</div>
+        <div class="role">Kennesaw State University</div>
+        <div class="role">schakra2@kennesaw.edu</div>
+        <a class="linkedin-icon" href="https://www.linkedin.com/in/sumit-chakravarty-354b818/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+
     </div>
   </div>
 
+  <!-- Methodology Section -->
   <div class="section">
     <h2>Our Methodology</h2>
-    <p style="max-width: 900px; margin: 0 auto; text-align: justify; line-height: 1.6;">
-      We continuously monitor patients with Alzheimer's Disease and Related Dementias (AD/ADRD) using micro-Doppler radar. The data collected is processed through a hybrid CNN+LSTM model to detect wandering or falls. If an anomaly is detected, caregivers are promptly notified via an iOS application. The app supports real-time monitoring, SOS alerts, event-triggered video recording, and a dashboard for tracking patient history.
+    <p style="max-width: 900px; margin: 0 auto; text-align: justify;">
+      Patients with Alzheimer's Disease and Related Dementias (AD/ADRD) will be continuously monitored using a micro-Doppler radar. After data collection, a CNN+LSTM model will process the input. If the model detects wandering or falls, caregivers will be immediately notified. An iOS application will be used to update and view the patient’s current status. The app includes features such as real-time monitoring, an SOS alert button, access to event-triggered video recordings, and a patient dashboard that displays historical health records.
     </p>
   </div>
 
+  <!-- Workflow Images Section -->
   <div class="section">
-    <h2>Workflow Overview</h2>
+    <h2>This is Workflow</h2>
     <div class="workflow-images">
       <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/figure1.png?raw=true" alt="Workflow Diagram 1">
       <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/figure2.png?raw=true" alt="Workflow Diagram 2">
     </div>
   </div>
 
+  <!-- Projects Section -->
   <div class="projects">
     <h2>Our Projects</h2>
-    <p>We are transforming healthcare through innovations in mobile technology, machine learning, and real-time patient monitoring. Explore how SafeCircle is making a difference.</p>
+    <p>Discover how we're transforming healthcare with innovative solutions in mobile technology, data analytics, and patient monitoring systems.</p>
   </div>
 
+  <!-- Funding Acknowledgment -->
   <div class="funding-note">
-    This project is proudly funded by the National Institutes of Health (NIH).
+    This project is funded by the National Institutes of Health (NIH).
   </div>
 
+  <!-- Footer -->
   <div class="footer">
-    <p>&copy; 2025 SafeCircle. All rights reserved.</p>
+    <p>&copy; 2025 Mhealth. All rights reserved.</p>
   </div>
 
 </body>
