@@ -68,18 +68,9 @@
     }
 
     .team-member .name {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
       margin-top: 10px;
       font-weight: bold;
       color: #2c3e50;
-      text-decoration: none;
-    }
-
-    .team-member .name:hover {
-      text-decoration: underline;
     }
 
     .team-member .role {
@@ -105,25 +96,28 @@
       padding: 20px;
     }
 
-    .linkedin-icon {
-      width: 16px;
-      height: 16px;
-      border-radius: 0;
-    }
-
     .workflow-images {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
       margin-top: 30px;
     }
 
     .workflow-images img {
-      max-width: 400px;
+      max-width: 600px;
       width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .funding-note {
+      background-color: #fefefe;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      border-top: 1px solid #ccc;
     }
   </style>
 </head>
@@ -143,38 +137,49 @@
       <!-- Team Members -->
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakraborty">
-        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
-          Soarov Chakraborty <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-        </a>
+        <div class="name">Soarov Chakraborty</div>
         <div class="role">Software Engineer</div>
         <div class="extra-info">Department of Information Technology</div>
-        <div class="extra-info">NIH Funded Project</div>
       </div>
 
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakraborty">
-        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
-          Soarov Chakraborty <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-        </a>
+        <div class="name">Soarov Chakraborty</div>
         <div class="role">Student, Kennesaw State University</div>
         <div class="extra-info">Department of Information Technology</div>
-        <div class="extra-info">NIH Funded Project</div>
       </div>
 
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakraborty">
-        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
-          Soarov Chakraborty <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-        </a>
+        <div class="name">Soarov Chakraborty</div>
         <div class="role">Student, Kennesaw State University</div>
         <div class="extra-info">Department of Information Technology</div>
-        <div class="extra-info">NIH Funded Project</div>
+      </div>
+    </div>
+
+    <!-- Advisors Section -->
+    <h2 style="margin-top: 60px;">Advisors</h2>
+    <div class="team-container">
+
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Advisor">
+        <div class="name">Soarov Chakraborty</div>
+        <div class="role">Professor</div>
+        <div class="extra-info">Kennesaw State University</div>
+        <div class="extra-info">Department of Information Technology</div>
       </div>
 
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Advisor">
+        <div class="name">Soarov Chakraborty</div>
+        <div class="role">Professor</div>
+        <div class="extra-info">Kennesaw State University</div>
+        <div class="extra-info">Department of Information Technology</div>
+      </div>
     </div>
   </div>
 
-  <!-- AD/ADRD Description Section -->
+  <!-- Methodology Section -->
   <div class="section">
     <h2>Our Methodology</h2>
     <p>
@@ -194,38 +199,15 @@
     </div>
   </div>
 
-  <!-- Advisors Section -->
-  <div class="section" style="background-color: #f9f9f9;">
-    <h2>Advisors</h2>
-    <div class="team-container">
-
-      <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Advisor">
-        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
-          Soarov Chakraborty <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-        </a>
-        <div class="role">Professor</div>
-        <div class="extra-info">Kennesaw State University</div>
-        <div class="extra-info">Department of Information Technology</div>
-      </div>
-
-      <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Advisor">
-        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
-          Soarov Chakraborty <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-        </a>
-        <div class="role">Professor</div>
-        <div class="extra-info">Kennesaw State University</div>
-        <div class="extra-info">Department of Information Technology</div>
-      </div>
-
-    </div>
-  </div>
-
   <!-- Projects Section -->
   <div class="section projects">
     <h2>Our Projects</h2>
     <p>Discover how we're transforming healthcare with innovative solutions in mobile technology, data analytics, and patient monitoring systems.</p>
+  </div>
+
+  <!-- Funding Acknowledgment -->
+  <div class="funding-note">
+    This project is funded by the National Institutes of Health (NIH).
   </div>
 
   <!-- Footer -->
