@@ -33,6 +33,14 @@
       text-align: center;
     }
 
+    .section p {
+      max-width: 900px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
     .team-container {
       display: flex;
       flex-wrap: wrap;
@@ -57,25 +65,33 @@
     .team-member img {
       width: 100%;
       border-radius: 50%;
-      transition: opacity 0.3s;
     }
 
-    .team-member img:hover {
-      opacity: 0.85;
-    }
-
-    .team-member a {
-      text-decoration: none;
-      color: #2c3e50;
-      font-weight: bold;
-      display: block;
+    .team-member .name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
       margin-top: 10px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    .team-member .name:hover {
+      text-decoration: underline;
     }
 
     .team-member .role {
       font-size: 14px;
       color: #7f8c8d;
       margin-top: 5px;
+    }
+
+    .team-member .extra-info {
+      font-size: 13px;
+      color: #555;
+      margin-top: 4px;
     }
 
     .projects {
@@ -87,6 +103,11 @@
       color: #fff;
       text-align: center;
       padding: 20px;
+    }
+
+    .linkedin-icon {
+      width: 16px;
+      height: 16px;
     }
   </style>
 </head>
@@ -103,31 +124,92 @@
     <h2>Our Team</h2>
     <div class="team-container">
 
-      <!-- Member 1 -->
+      <!-- Team Members 1–5 -->
       <div class="team-member">
-        <a href="https://www.linkedin.com/in/member1" target="_blank">
-          <img src="https://via.placeholder.com/150" alt="Member 1">
-          <span>Member 1</span>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Member 1">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Member 1 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
         </a>
         <div class="role">Software Engineer</div>
+        <div class="extra-info">Department of Information Technology</div>
+        <div class="extra-info">NIH Funded Project</div>
       </div>
 
-      <!-- Member 2 -->
       <div class="team-member">
-        <a href="https://www.linkedin.com/in/member2" target="_blank">
-          <img src="https://via.placeholder.com/150" alt="Member 2">
-          <span>Member 2</span>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Member 2">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Member 2 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
         </a>
         <div class="role">Student, Kennesaw State University</div>
+        <div class="extra-info">Department of Information Technology</div>
+        <div class="extra-info">NIH Funded Project</div>
       </div>
 
-      <!-- Member 3 -->
       <div class="team-member">
-        <a href="https://www.linkedin.com/in/member3" target="_blank">
-          <img src="https://via.placeholder.com/150" alt="Member 3">
-          <span>Member 3</span>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Member 3">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Member 3 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
         </a>
         <div class="role">Student, Kennesaw State University</div>
+        <div class="extra-info">Department of Information Technology</div>
+        <div class="extra-info">NIH Funded Project</div>
+      </div>
+
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Member 4">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Member 4 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <div class="role">Student, Kennesaw State University</div>
+        <div class="extra-info">Department of Information Technology</div>
+        <div class="extra-info">NIH Funded Project</div>
+      </div>
+
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Member 5">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Member 5 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <div class="role">Student, Kennesaw State University</div>
+        <div class="extra-info">Department of Information Technology</div>
+        <div class="extra-info">NIH Funded Project</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AD/ADRD Description Section -->
+  <div class="section">
+    <h2>Our Methodology</h2>
+    <p>
+      Patients with Alzheimer's Disease and Related Dementias (AD/ADRD) will be continuously monitored using a micro-Doppler radar. After data collection, a CNN+LSTM model will process the input. If the model detects wandering or falls, caregivers will be immediately notified. An iOS application will be used to update and view the patient’s current status.
+    </p>
+    <p>
+      The app includes features such as real-time monitoring, an SOS alert button, access to event-triggered video recordings, and a patient dashboard that displays historical health records. Figure 3 outlines the complete methodology, while Figure 4 highlights the key features of the iOS application.
+    </p>
+  </div>
+
+  <!-- Advisors Section -->
+  <div class="section" style="background-color: #f9f9f9;">
+    <h2>Advisors</h2>
+    <div class="team-container">
+
+      <!-- Advisor 1 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Advisor 1">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Advisor 1 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <div class="role">Advisor</div>
+      </div>
+
+      <!-- Advisor 2 -->
+      <div class="team-member">
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Advisor 2">
+        <a class="name" href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank">
+          Advisor 2 <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <div class="role">Advisor</div>
       </div>
 
     </div>
