@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SafeCircle | Empowering Health with Technology</title>
   <style>
     html { scroll-behavior: smooth; }
@@ -19,6 +19,13 @@
       text-align: center;
       padding: 40px 20px;
     }
+    .btn-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
     .section, .projects, .funding-note {
       padding: 60px 20px;
       text-align: center;
@@ -27,7 +34,6 @@
       background-color: #005ea6;
       color: white;
       padding: 12px 24px;
-      margin-top: 20px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -83,7 +89,13 @@
   <div class="header">
     <h1>SafeCircle</h1>
     <p>Empowering Health with Technology</p>
-    <button class="btn" onclick="location.href='#team'">Meet the Team</button>
+    <div class="btn-container">
+      <button class="btn" onclick="location.href='#team'">Meet the Team</button>
+      <button class="btn" onclick="location.href='#advisors'">Meet Our Advisors</button>
+      <button class="btn" onclick="location.href='#methodology'">Explore Methodology</button>
+      <button class="btn" onclick="location.href='#workflow'">See Workflow</button>
+      <button class="btn" onclick="location.href='#projects'">Explore Projects</button>
+    </div>
   </div>
 
   <div class="section" id="team">
@@ -92,7 +104,7 @@
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakra Borty" width="200" height="200" style="border-radius:50%; object-fit:cover;">
         <h3>Soarov Chakra Borty</h3>
-        <p>Graduate Research Assistant<br>Department of Information Technology,<br>Kennesaw State University<br>sborty@students.kennesaw.edu</p>
+        <p>Graduate Research Assistant<br>Department of Information Technology<br>Kennesaw State University<br>sborty@students.kennesaw.edu</p>
         <a href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank" class="linkedin-icon">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
         </a>
@@ -100,7 +112,7 @@
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/awan.jpeg?raw=true" alt="Awan-ur Rahman" width="200" height="200" style="border-radius:50%; object-fit:cover;">
         <h3>Awan-ur Rahman</h3>
-        <p>Graduate Research Assistant<br>Department of Information Technology,<br>Kennesaw State University<br>arahma21@students.kennesaw.edu</p>
+        <p>Graduate Research Assistant<br>Department of Information Technology<br>Kennesaw State University<br>arahma21@students.kennesaw.edu</p>
         <a href="https://www.linkedin.com/in/awanurrahman/" target="_blank" class="linkedin-icon">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
         </a>
@@ -108,13 +120,12 @@
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sakib.jpeg?raw=true" alt="Shakib Quddus" width="200" height="200" style="border-radius:50%; object-fit:cover;">
         <h3>Shakib Quddus</h3>
-        <p>Graduate Research Assistant<br>Department of Electrical & Computer Engineering,<br>Kennesaw State University<br>squddus@students.kennesaw.edu</p>
+        <p>Graduate Research Assistant<br>Department of Electrical & Computer Engineering<br>Kennesaw State University<br>squddus@students.kennesaw.edu</p>
         <a href="https://www.linkedin.com/in/shakib-quddus/" target="_blank" class="linkedin-icon">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
         </a>
       </div>
     </div>
-    <button class="btn" onclick="location.href='#advisors'">Meet Our Advisors</button>
   </div>
 
   <div class="section" id="advisors">
@@ -123,7 +134,7 @@
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/ns.jpeg?raw=true" alt="Dr. Nazmus Sakib" width="200" height="200" style="border-radius:50%; object-fit:cover;">
         <h3>Dr. Nazmus Sakib</h3>
-        <p>Assistant Professor<br>Department of Information Technology,<br>Kennesaw State University<br>nsakib1@kennesaw.edu</p>
+        <p>Assistant Professor<br>Department of Information Technology<br>Kennesaw State University<br>nsakib1@kennesaw.edu</p>
         <a href="https://www.linkedin.com/in/nazmus-sakib-032718b8/" target="_blank" class="linkedin-icon">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
         </a>
@@ -131,13 +142,12 @@
       <div class="team-member">
         <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sc1.png?raw=true" alt="Dr. Sumit Chakravarty" width="200" height="200" style="border-radius:50%; object-fit:cover;">
         <h3>Dr. Sumit Chakravarty</h3>
-        <p>Associate Professor<br>Department of Electrical & Computer Engineering,<br>Kennesaw State University<br>schakra2@kennesaw.edu</p>
+        <p>Associate Professor<br>Department of Electrical & Computer Engineering<br>Kennesaw State University<br>schakra2@kennesaw.edu</p>
         <a href="https://www.linkedin.com/in/sumit-chakravarty-354b818/" target="_blank" class="linkedin-icon">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
         </a>
       </div>
     </div>
-    <button class="btn" onclick="location.href='#methodology'">Explore Methodology</button>
   </div>
 
   <div class="section" id="methodology">
@@ -145,7 +155,6 @@
     <p style="max-width: 900px; margin: 0 auto; text-align: justify;">
       Alzheimer's disease and related dementia (AD/ADRD) is an irreversible and degenerative neurological condition that severely impacts cognitive functions. SafeCircle integrates AI and micro-radar technology into a mobile health platform to ensure patient safety and reduce caregiver burden. The system provides real-time alerts, emergency support, and continuous monitoring through an intuitive interface.
     </p>
-    <button class="btn" onclick="location.href='#workflow'">See Workflow</button>
   </div>
 
   <div class="section" id="workflow">
@@ -154,7 +163,6 @@
       <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/figure1.png?raw=true" alt="Workflow 1">
       <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/figure2.png?raw=true" alt="Workflow 2">
     </div>
-    <button class="btn" onclick="location.href='#projects'">Explore Projects</button>
   </div>
 
   <div class="projects" id="projects">
