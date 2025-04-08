@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SafeCircle | Empowering Health with Technology</title>
+  <title>SafeCircle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -13,12 +14,43 @@
       background-color: #f7f9fc;
       color: #333;
     }
+
     .header, .footer {
       background-color: #003366;
       color: #ffffff;
       text-align: center;
       padding: 40px 20px;
     }
+
+      h1.gradient-text {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 36px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid white;
+        width: 0;
+        animation:
+          typing 2.5s steps(20, end) forwards,
+          blinkCaret 0.6s step-end 6,
+          removeCaret 0s 3s forwards;
+        
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 9ch }
+      }
+
+      @keyframes blinkCaret {
+        0%, 100% { border-color: transparent; }
+        50% { border-color: white; }
+      }
+
+      @keyframes removeCaret {
+        to { border-right: none; }
+      }
+
     .btn-container {
       margin-top: 20px;
       display: flex;
@@ -26,10 +58,7 @@
       flex-wrap: wrap;
       gap: 15px;
     }
-    .section, .projects, .funding-note {
-      padding: 60px 20px;
-      text-align: center;
-    }
+
     .btn {
       background-color: #005ea6;
       color: white;
@@ -40,7 +69,36 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
+
     .btn:hover { background-color: #004080; }
+
+    .section, .projects, .funding-note {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2, .projects h2 {
+      display: inline-block;
+      position: relative;
+      font-size: 28px;
+    }
+
+    .section h2::after, .projects h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 4px;
+      background-color: #005ea6;
+      transition: width 0.5s ease-out;
+    }
+
+    .section h2.animate-underline::after,
+    .projects h2.animate-underline::after {
+      width: 100%;
+    }
+
     .team-container, .workflow-images {
       display: flex;
       justify-content: center;
@@ -48,82 +106,100 @@
       gap: 30px;
       margin-top: 20px;
     }
+
     .team-member {
       background-color: #ffffff;
-      padding: 24px;
+      padding: 24px 20px 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
-      max-width: 300px;
+      max-width: 340px;
+      min-height: 440px;
       width: 100%;
       box-sizing: border-box;
       word-wrap: break-word;
+      text-align: left;
+      position: relative;
+    }
+
+    .team-member:hover { transform: translateY(-5px); }
+
+    .team-member img {
+      display: block;
+      margin: 0 auto 12px auto;
+      border-radius: 50%;
+      object-fit: cover;
+      width: 200px;
+      height: 200px;
+    }
+
+    .info-line {
+      display: flex;
+      align-items: flex-start;
+      margin: 6px 0;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    .info-line i {
+      color: #005ea6;
+      min-width: 18px;
+      margin-top: 2px;
+    }
+
+    .info-line.email a {
+      color: #333;
+      word-break: break-word;
+      text-decoration: none;
+    }
+
+    .linkedin-icon {
+      position: absolute;
+      bottom: 18px;
+      left: 0;
+      right: 0;
       text-align: center;
     }
+
+    .linkedin-icon a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-size: 26px;
+    }
+
     .workflow-images img {
       background-color: #ffffff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      max-width: 100%;
+      max-width: 80%;
       width: 100%;
     }
-    .team-member:hover, .workflow-images img:hover { transform: translateY(-5px); }
-    .linkedin-icon img {
-      width: 20px;
-      height: 20px;
-      margin-top: 10px;
-    }
+
     .funding-note {
       background-color: #e3f2fd;
       border-top: 2px solid #bbdefb;
     }
-    .section h2::after {
-      content: '';
-      display: block;
-      width: 60px;
-      margin: 10px auto;
-      border-bottom: 3px solid #005ea6;
-    }
 
-    /* Responsive layout */
     @media (max-width: 768px) {
-      .btn {
-        font-size: 14px;
-        padding: 10px 18px;
-      }
-      .header, .footer {
-        padding: 30px 15px;
-      }
-      .btn-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .team-member {
-        max-width: 95%;
-      }
-      .workflow-images {
-        flex-direction: column;
-        align-items: center;
-      }
+      .btn { font-size: 14px; padding: 10px 18px; }
+      .header, .footer { padding: 30px 15px; }
+      .btn-container { flex-direction: column; align-items: center; }
+      .team-member { max-width: 95%; }
+      .workflow-images { flex-direction: column; align-items: center; }
     }
 
     @media (max-width: 480px) {
       h1 { font-size: 24px; }
       h2 { font-size: 20px; }
-      .btn {
-        font-size: 13px;
-        padding: 8px 16px;
-      }
+      .btn { font-size: 13px; padding: 8px 16px; }
     }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <h1>SafeCircle</h1>
-    <p>Empowering Health with Technology</p>
+    <h1 id="safecircle-title" class="gradient-text">SafeCircle</h1>
     <div class="btn-container">
       <button class="btn" onclick="location.href='#team'">Meet the Team</button>
       <button class="btn" onclick="location.href='#advisors'">Meet Our Advisors</button>
@@ -134,66 +210,74 @@
   </div>
 
   <div class="section" id="team">
-    <h2>Our Team</h2>
+    <h2 class="reveal">Our Team</h2>
     <div class="team-container">
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakra Borty" width="200" height="200" style="border-radius:50%; object-fit:cover;">
-        <h3>Soarov Chakra Borty</h3>
-        <p>Graduate Research Assistant<br>Department of Information Technology<br>Kennesaw State University<br>sborty@students.kennesaw.edu</p>
-        <a href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank" class="linkedin-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-        </a>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/1st.jpg?raw=true" alt="Soarov Chakra Borty">
+        <div class="info-line"><i class="fas fa-user"></i> Soarov Chakra Borty</div>
+        <div class="info-line"><i class="fas fa-briefcase"></i> Graduate Research Assistant</div>
+        <div class="info-line"><i class="fas fa-building"></i> Department of Information Technology</div>
+        <div class="info-line"><i class="fas fa-university"></i> Kennesaw State University</div>
+        <div class="info-line email"><i class="fas fa-envelope"></i> <a href="mailto:sborty@students.kennesaw.edu">sborty@students.kennesaw.edu</a></div>
+        <div class="linkedin-icon"><a href="https://www.linkedin.com/in/soarovchakraborty/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       </div>
+
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/awan.jpeg?raw=true" alt="Awan-ur Rahman" width="200" height="200" style="border-radius:50%; object-fit:cover;">
-        <h3>Awan-ur Rahman</h3>
-        <p>Graduate Research Assistant<br>Department of Information Technology<br>Kennesaw State University<br>arahma21@students.kennesaw.edu</p>
-        <a href="https://www.linkedin.com/in/awanurrahman/" target="_blank" class="linkedin-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-        </a>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/awan.jpeg?raw=true" alt="Awan-ur Rahman">
+        <div class="info-line"><i class="fas fa-user"></i> Awan-ur Rahman</div>
+        <div class="info-line"><i class="fas fa-briefcase"></i> Graduate Research Assistant</div>
+        <div class="info-line"><i class="fas fa-building"></i> Department of Information Technology</div>
+        <div class="info-line"><i class="fas fa-university"></i> Kennesaw State University</div>
+        <div class="info-line email"><i class="fas fa-envelope"></i> <a href="mailto:arahma21@students.kennesaw.edu">arahma21@students.kennesaw.edu</a></div>
+        <div class="linkedin-icon"><a href="https://www.linkedin.com/in/awanurrahman/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       </div>
+
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sakib.jpeg?raw=true" alt="Shakib Quddus" width="200" height="200" style="border-radius:50%; object-fit:cover;">
-        <h3>Shakib Quddus</h3>
-        <p>Graduate Research Assistant<br>Department of Electrical & Computer Engineering<br>Kennesaw State University<br>squddus@students.kennesaw.edu</p>
-        <a href="https://www.linkedin.com/in/shakib-quddus/" target="_blank" class="linkedin-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-        </a>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sakib.jpeg?raw=true" alt="Shakib Quddus">
+        <div class="info-line"><i class="fas fa-user"></i> Shakib Quddus</div>
+        <div class="info-line"><i class="fas fa-briefcase"></i> Graduate Research Assistant</div>
+        <div class="info-line"><i class="fas fa-building"></i> Department of Electrical & Computer Engineering</div>
+        <div class="info-line"><i class="fas fa-university"></i> Kennesaw State University</div>
+        <div class="info-line email"><i class="fas fa-envelope"></i> <a href="mailto:squddus@students.kennesaw.edu">squddus@students.kennesaw.edu</a></div>
+        <div class="linkedin-icon"><a href="https://www.linkedin.com/in/shakib-quddus/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       </div>
     </div>
   </div>
 
   <div class="section" id="advisors">
-    <h2>Our Advisors</h2>
+    <h2 class="reveal">Our Advisors</h2>
     <div class="team-container">
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/ns.jpeg?raw=true" alt="Dr. Nazmus Sakib" width="200" height="200" style="border-radius:50%; object-fit:cover;">
-        <h3>Dr. Nazmus Sakib</h3>
-        <p>Assistant Professor<br>Department of Information Technology<br>Kennesaw State University<br>nsakib1@kennesaw.edu</p>
-        <a href="https://www.linkedin.com/in/nazmus-sakib-032718b8/" target="_blank" class="linkedin-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-        </a>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/ns.jpeg?raw=true" alt="Dr. Nazmus Sakib">
+        <div class="info-line"><i class="fas fa-user-tie"></i> Dr. Nazmus Sakib</div>
+        <div class="info-line"><i class="fas fa-briefcase"></i> Assistant Professor</div>
+        <div class="info-line"><i class="fas fa-building"></i> Department of Information Technology</div>
+        <div class="info-line"><i class="fas fa-university"></i> Kennesaw State University</div>
+        <div class="info-line email"><i class="fas fa-envelope"></i> <a href="mailto:nsakib1@kennesaw.edu">nsakib1@kennesaw.edu</a></div>
+        <div class="linkedin-icon"><a href="https://www.linkedin.com/in/nazmus-sakib-032718b8/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       </div>
+
       <div class="team-member">
-        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sc1.png?raw=true" alt="Dr. Sumit Chakravarty" width="200" height="200" style="border-radius:50%; object-fit:cover;">
-        <h3>Dr. Sumit Chakravarty</h3>
-        <p>Associate Professor<br>Department of Electrical & Computer Engineering<br>Kennesaw State University<br>schakra2@kennesaw.edu</p>
-        <a href="https://www.linkedin.com/in/sumit-chakravarty-354b818/" target="_blank" class="linkedin-icon">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-        </a>
+        <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/sc1.png?raw=true" alt="Dr. Sumit Chakravarty">
+        <div class="info-line"><i class="fas fa-user-tie"></i> Dr. Sumit Chakravarty</div>
+        <div class="info-line"><i class="fas fa-briefcase"></i> Associate Professor</div>
+        <div class="info-line"><i class="fas fa-building"></i> Department of Electrical & Computer Engineering</div>
+        <div class="info-line"><i class="fas fa-university"></i> Kennesaw State University</div>
+        <div class="info-line email"><i class="fas fa-envelope"></i> <a href="mailto:schakra2@kennesaw.edu">schakra2@kennesaw.edu</a></div>
+        <div class="linkedin-icon"><a href="https://www.linkedin.com/in/sumit-chakravarty-354b818/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       </div>
     </div>
   </div>
 
   <div class="section" id="methodology">
-    <h2>Our Methodology</h2>
-    <p style="max-width: 900px; margin: 0 auto; text-align: justify;">
+    <h2 class="reveal">Our Methodology</h2>
+    <p style="max-width: 1200px; margin: 0 auto; text-align: justify;">
       Alzheimer's disease and related dementia (AD/ADRD) is an irreversible and degenerative neurological condition that severely impacts neurons, resulting in cognitive decline and memory loss. This study explores a mHealth system, including a SafeCircle iOS prototype, a novel solution that combines artificial intelligence with cutting-edge micro-radar technology. The platform offers a variety of features, including management of patient and caregiver profiles, real-time alerts in case of emergencies, emergency contact lists, one-touch SOS support, sharing of live locations, and recording of unusual events in video. It is a responsive and reliable care assistant that optimizes patient safety while reducing caregiver burden.
     </p>
   </div>
 
   <div class="section" id="workflow">
-    <h2>Workflow</h2>
+    <h2 class="reveal">Workflow</h2>
     <div class="workflow-images">
       <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/figure1.png?raw=true" alt="Workflow 1">
       <img src="https://github.com/Dream-kid/mHealth/blob/main/picture/figure2.png?raw=true" alt="Workflow 2">
@@ -201,7 +285,7 @@
   </div>
 
   <div class="projects" id="projects">
-    <h2>Our Projects</h2>
+    <h2 class="reveal">Our Projects</h2>
     <p>We are innovating in mobile health, AI-driven patient monitoring, and caregiver support systems. Our research and development efforts are targeted toward making healthcare accessible and proactive.</p>
   </div>
 
@@ -213,5 +297,17 @@
     <p>&copy; 2025 SafeCircle. All rights reserved.</p>
   </div>
 
+  <script>
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-underline');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
